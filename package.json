@@ -1,0 +1,29 @@
+{
+  "name": "poprun",
+  "version": "1.0.0",
+  "description": "```\r npm install\r ```\r > 可能会报路径错误：根据报错创建指定目录",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.2.2",
+    "vant-weapp": "^0.5.28"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.24.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Patrick-Jun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrick-Jun/PopRun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Patrick-Jun/PopRun/issues"
+  },
+  "homepage": "https://github.com/Patrick-Jun/PopRun#readme"
+}

@@ -1,0 +1,108 @@
+.run-item-box{
+    width: 100%;
+    margin-top: 25rpx;
+    .con{
+        width: 92%;
+        height: 120rpx;
+        margin: 0 auto;
+        border-radius: 60rpx;
+        background-color: rgb(241, 241, 241);
+        box-shadow: 5px 5px 5px rgba(104, 103, 103, 0.6);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .icon{
+            width: 106rpx;  //不知道为什么，在组件了这个图标就变扁了
+            height: 90rpx;
+            margin-left: 24rpx;
+            background-color: orange;
+            border-radius: 50%;
+        }
+        .data{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .some{
+                margin-left: 24rpx;
+                height: 100rpx;
+                .totle{
+                    height: 65rpx;
+                    line-height: 65rpx;
+                    font-size: 32rpx;
+                    color: black;
+                    text{
+                        color: red;
+                    }
+                }
+                .speed{
+                    height: 35rpx;
+                    line-height: 35rpx;
+                    font-size:26rpx;
+                    color: gray;
+                }
+            }
+            .time{
+                position: absolute;
+                right: 90rpx;
+                font-size: 32rpx;
+                color: gray;
+            }
+        }
+    }
+    .con-hover{
+        box-shadow: 3px 3px 3px rgba(104, 103, 103, 0.6);
+    }
+}
+.ml{
+    margin-left: 20rpx;
+}
+
+/* 详细显示 */
+.detail{
+    width: 560rpx;
+    height: 720rpx;
+    position: relative;
+    .d-img{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 70rpx;
+        #runImg{
+            margin-left: 30rpx;
+        }
+    }
+    .d-data{
+        display: flex;
+        flex-direction: column;
+        margin: 10rpx 50rpx;
+        .d-item{
+            margin-top: 5rpx;
+            font-size: 28rpx;
+            text{
+                font-size: 24rpx;
+                color: gray;
+            }
+        }
+    }
+    .d-btns{
+        width: 100%;
+        position: absolute;
+        bottom: 30rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .d-btn{
+            margin-left: 30rpx;
+            margin-right: 30rpx;
+        }
+    }
+}
+
+#runImg {
+    position: fixed;
+    left: -9999px;
+    background-color: transparent;
+    width: 500px;
+    height: 400px;
+}

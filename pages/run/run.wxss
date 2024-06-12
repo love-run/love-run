@@ -1,0 +1,370 @@
+/**index.wxss**/
+/* 不加page无法全屏 */
+button {
+  padding: 0;
+  margin: 0;
+}
+page {
+  height: 100%;
+}
+
+.lf {
+  float: left
+}
+.rt {
+  float: right;
+}
+
+/* 隐藏滚动条样式 */
+.inner-container::-webkit-scrollbar {
+    display: none;
+}
+
+.view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+ 
+map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.run-start {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+}
+.run-end {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+}
+.speed {
+  background: #fff;
+  margin: 0 auto;
+  line-height: 350rpx;
+  opacity: 0.8;
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #409eff;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.start-btn {
+  position: absolute;
+  bottom: 0;
+  /* background: #fff; */
+  background: linear-gradient(to top, #63b7af, transparent);
+  /* line-height: 350rpx; */
+  height: 350rpx;
+  width: 100%;
+  /* border-radius: 50%; */
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+@-webkit-keyframes fx-plyr-play-button {
+  0% {
+      -webkit-transform: scale(0.667);
+      transform: scale(0.667);
+      opacity: 0.5;
+  }
+  to {
+      opacity: 0
+  }
+}
+@keyframes fx-plyr-play-button {
+  0% {
+      -webkit-transform: scale(0.667);
+      transform: scale(0.667);
+      opacity: 0.5;
+  }
+  to {
+      opacity: 0
+  }
+}
+.start-btn button {
+  margin: 0 auto;
+  height: 200rpx;
+  width: 200rpx;
+  line-height: 200rpx;
+  border-radius: 50%;
+  /* background: #78B078; */
+  background: linear-gradient(to left top, #63b7af, #abf0e9);
+  color: #fff;
+  font-weight: bold;
+}
+
+.start-btn .out {
+  margin: -250rpx auto;
+  width: 300rpx;
+  height: 300rpx;
+  -webkit-animation: fx-plyr-play-button 1s ease-out infinite;
+  animation: fx-plyr-play-button 1s ease-out infinite;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px #fff;
+  box-shadow: 0 0 5px #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+}
+.swiper-text {
+  margin: 250rpx auto;
+  width: 300rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  background: #555;
+  border-radius: 24rpx;
+}
+
+.swiper-text swiper {
+  height: 100%;
+  padding: 0 20rpx;
+}
+.swiper-text swiper-item {
+  font-size: 18rpx;
+  color: #fff;
+}
+/* 排行榜开始 */
+.ranking{
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+}
+.ranking-con {
+  height: 80vh;
+  width: 80vw;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.ranking button {
+  width: 40px;
+  height: 40px;
+  background: #63b7af;
+  border-radius: 50%;
+  float: right;
+  margin: 20rpx 20rpx;
+}
+
+.ranking button cover-image {
+  width: 20px;
+  height: 20px;
+  margin: 10px auto;
+}
+.rank-list {
+  height: 66vh;
+}
+.ranking-con .title {
+  text-align: center;
+  font-size: 28rpx;
+  color: #707070;
+  line-height: 6vh;
+}
+.rank-list .cell-group{
+  height: 53vh;
+  overflow: auto;
+}
+.rank-list .cell {
+  height: 8vh;
+  width: 516rpx;
+  border-radius: 10rpx;
+  /* background: red; */
+  border: 1rpx solid #63b7af;
+  margin: 0 12rpx;
+  margin-top: 0.5vh;
+  position: relative;
+}
+
+.rank-list .cell image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.rank-list .cell .cell-info {
+  margin-left: 62rpx;
+  position: relative;
+}
+
+.rank-list .cell .num {
+  height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.rank-list .cell .cell-info .photo {
+  height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.rank-list .cell .cell-info .text {
+  margin-left: 32px;
+}
+
+.rank-list .cell .cell-info .name {
+  font-size: 14px;
+  /* line-height: 24px */
+}
+
+.rank-list .cell .cell-info .detail {
+  color: #80848f;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+
+.rank-list .my-cell {
+  background: #d4f3ef;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0.5vh;
+}
+.rankNum{
+  color: #abf0e9;
+  font-size: 40rpx;
+  font-weight: 600;
+  font-family: Arial,Verdana,Sans-serif;
+  /* padding-left: 10rpx; */
+}
+.my-cell .rankNum{
+  color: #fff;
+}
+/* 排行榜结束 */
+
+
+/* 正在跑步开始 */
+.running {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #63b7af, transparent);
+  text-align: center;
+  overflow: hidden;
+}
+.running .route {
+  color: #ee8572;
+  margin: 100rpx 0;
+}
+.running .route .num {
+  font-size: 200rpx;
+  display: block;
+  /* font-family: fantasy; */
+}
+.running .text {
+  color:#fff;
+  line-height: 50rpx;
+}
+.running .tmsp {
+  overflow: hidden;
+  width: 350rpx;
+  margin: 0 auto;
+}
+.running .time text ,.running .avrSpeed text{
+  color: #999;
+  display: block;
+}
+.running .run-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 300rpx
+}
+.running .run-btn button {
+  display: inline-block;
+  border-radius: 50%;
+  height: 150rpx;
+  width: 150rpx;
+  margin: 0 40rpx;
+  line-height: 150rpx;
+  color: #fff;
+}
+.running .run-btn .lf-btn {
+  background: #ffe0ac;
+}
+.running .run-btn .rt-btn {
+  background: #ee8572;
+}
+/* 正在跑步结束 */
+/* 跑步结束开始 */
+.go-back {
+  position: absolute;
+  z-index: 1000;
+  top: 20rpx;
+  left: 20rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background: #63b7af;
+  width: 150rpx;
+  line-height: 80rpx;
+}
+.runRes {
+  width: 96vw;
+  height: 300rpx;
+  margin: 0 auto;
+  background: linear-gradient(to left top, #63b7af, #abf0e9);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.runRes .num {
+  display: block;
+  font-size: 80rpx;
+}
+.runRes .detail {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+}
+.runRes .detail text {
+  display: block;
+}
+.runRes .share {
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+}
+/* 跑步结束结束 */
+
+/* canvas 坑 */
+#shareNon, #shareMon {
+  position: fixed;
+	left: -9999px;
+	background-color: transparent;
+}
+#shareNon {
+  width: 500px;
+  height: 400px;
+}
+#shareMon {
+  width: 500px;
+  height: 555px;
+}
